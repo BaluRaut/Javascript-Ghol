@@ -6,3 +6,18 @@ var secondMax = function (){
     arr.splice(arr.indexOf(max), 1); // remove max from the array
     return Math.max.apply(null, arr); // get the 2nd max
 };
+// ===============2=====
+
+var myarray =['20','120','111','215','54','78','215'];
+var secondLargest = myarray.sort(function(a,b){return a - b})[myArray.length-3];
+alert(secondLargest); //120;
+
+// ===============3=====
+
+var arr = ['20','120','111','215','54','78'];
+
+arr.sort(function(a,b){
+    return b-a;
+});
+
+console.log(arr[1]);
