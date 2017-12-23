@@ -6,6 +6,32 @@ var secondMax = function (){
     arr.splice(arr.indexOf(max), 1); // remove max from the array
     return Math.max.apply(null, arr); // get the 2nd max
 };
+var myArray = [799, -85, 8, -1, 6, 4, 3, -2, -15, 0, 207, 75, 785, 122, 17];
+ 
+// This function returns 2nd largest Number from passed array
+function findSecondLargeNumber(arr){
+	
+	var fLargeNum = 0;
+	var sLargeNum = 0;
+	
+	for(var i=0; i<arr.length; i++){
+		if(fLargeNum < arr[i]){
+			sLargeNum = fLargeNum;
+			fLargeNum = arr[i];			
+		}else if(sLargeNum < arr[i]){
+			sLargeNum = arr[i];
+		}
+	}
+	
+	return sLargeNum;
+	
+}
+ 
+// Alert 2nd large number
+function Show2ndLargeNumber(){
+	alert(findSecondLargeNumber(myArray));
+}
+window.onload = Show2ndLargeNumber();
 // ===============2=====
 
 var myarray =['20','120','111','215','54','78','215'];
